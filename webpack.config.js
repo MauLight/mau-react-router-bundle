@@ -35,6 +35,14 @@ const config = (env, argv) => {
           include: path.resolve(__dirname, 'src'),
           use: ['style-loader', 'css-loader', 'postcss-loader'],
         },
+        {
+          test: /\.svg$/,
+          use: 'file-loader'
+        },
+        {
+          test: /\.png$/,
+          use: 'file-loader'
+        }
       ]
     },
     resolve: {
